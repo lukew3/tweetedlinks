@@ -3,18 +3,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Card from '../components/Card'
 import styles from '../styles/Home.module.css'
+import data from '../public/data.json'
 
 const Home: NextPage = () => {
-  const data = [
-  	{
-		"link": "https://google.com",
-		"tweetLink": "https://twitter.com"
-	},
-  	{
-		"link": "https://google.com",
-		"tweetLink": "https://twitter.com"
-	}
-  ];
 
   console.log(data);
 

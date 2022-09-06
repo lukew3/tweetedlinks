@@ -15,7 +15,7 @@ const Card = (props) => {
 						<img src="/img/twitter.svg" className={styles.logo} />
 					</a>
 				</div>
-				<div>date</div>
+				<div>{props.entry.publishTime}</div>
 			</div>
 		</div>
 	)
