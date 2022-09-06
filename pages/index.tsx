@@ -18,10 +18,11 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-      	<nav>
+      	<nav className={styles.nav}>
 		<h1 className={styles.title}>
 		  Tweeted Links
 		</h1>
+		<img src='/img/github.svg' className={styles.ghLogo}/>
 	</nav>
 	<div className={styles.cards}>
 		{ data.map((entry, index) => {
