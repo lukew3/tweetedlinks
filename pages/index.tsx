@@ -6,9 +6,6 @@ import styles from '../styles/Home.module.css'
 import data from '../public/data.json'
 
 const Home: NextPage = () => {
-
-  console.log(data);
-
   return (
     <div className={styles.container}>
       <Head>
