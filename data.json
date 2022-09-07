@@ -1,12 +1,22 @@
 [
-	{
-                "link": "https://en.wikipedia.org/wiki/Post-quantum_cryptography#Algorithms",
-                "tweetLink": "https://twitter.com/VitalikButerin/status/1566428195427160066?s=20&t=Dl02I7pxizAh7CqRBrhPtw",
-		"publishTime": "10:09 AM Sep 4, 2022"
-        },
-        {
-                "link": "https://graymirror.substack.com/p/optimal-autonomous-organizations",
-                "tweetLink": "https://twitter.com/VitalikButerin/status/1564789942294745088",
-		"publishTime": "9:39 PM Aug 30, 2022"
-        }
+  {
+    "tweetLink": "https://twitter.com/VitalikButerin/status/1567439025614495744",
+    "link": "https://en.wikipedia.org/wiki/1978_California_Proposition_13",
+    "created_at": "2022-09-07T09:05:59.000Z"
+  },
+  {
+    "tweetLink": "https://twitter.com/VitalikButerin/status/1567115833876283394",
+    "link": "https://twitter.com/terencechain/status/1567115533233049606/photo/1",
+    "created_at": "2022-09-06T11:41:45.000Z"
+  },
+  {
+    "tweetLink": "https://twitter.com/VitalikButerin/status/1566831883383701506",
+    "link": "https://en.wikipedia.org/wiki/List_of_famines",
+    "created_at": "2022-09-05T16:53:25.000Z"
+  },
+  {
+    "tweetLink": "https://twitter.com/VitalikButerin/status/1566830260947124226",
+    "link": "https://twitter.com/VitalikButerin/status/1566394611936899072",
+    "created_at": "2022-09-05T16:46:59.000Z"
+  }
 ]
