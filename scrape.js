@@ -30,7 +30,7 @@ async function main() {
 					const url_expanded = await uu.expand(url);
 					console.log(url_expanded);
 					outputData.push({
-						"tweetLink": `https://twitter.com/${process.env.TWEETER_USERNAME}/status/${tweet.id}`,
+						"tweet_link": `https://twitter.com/${process.env.TWEETER_USERNAME}/status/${tweet.id}`,
 						"link": url_expanded,
 						"created_at": tweet.created_at
 					});
