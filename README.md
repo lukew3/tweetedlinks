@@ -12,7 +12,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Data scraping
 If you want to set up this site for a different user, you're going to have to set up the Twitter API.
-Get your credentials [here](https://developer.twitter.com/en/docs/twitter-api) and then fill out the data in `config.json` accordingly. Then, include the username of the desired user to scrape in `config.json`. Finally, run 
+Get your credentials [here](https://developer.twitter.com/en/docs/twitter-api) and then fill out the data in `.env` accordingly. Then, include the username of the desired user to scrape in `.env`. Finally, run 
 ```
 node scrape.js
 ```
