@@ -22,7 +22,9 @@ const Home: NextPage = () => {
 		<h1 className={styles.title}>
 		  Tweeted Links
 		</h1>
-		<img src='/img/github.svg' className={styles.ghLogo}/>
+		<a href="https://github.com/lukew3/tweetedlinks">
+			<img src='/img/github.svg' className={styles.ghLogo}/>
+		</a>
 	</nav>
 	<div className={styles.cards}>
 		{ data.map((entry, index) => {
