@@ -16,9 +16,12 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
       	<nav className={styles.nav}>
-		<h1 className={styles.title}>
-		  Tweeted Links
-		</h1>
+		<div className={styles.navLeft}>
+			<h1 className={styles.title}>
+			  Tweeted Links
+			</h1>
+			<h3>from VitalikButerin</h3>
+		</div>
 		<a href="https://github.com/lukew3/tweetedlinks">
 			<img src='/img/github.svg' className={styles.ghLogo}/>
 		</a>
