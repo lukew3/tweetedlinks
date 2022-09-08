@@ -15,28 +15,44 @@ async function main() {
 
 	// Get all tweets
 	try {
-		const tweets = await client.tweets.usersIdTweets(
-			user.data.id,
-			{
-				"tweet.fields": [
-					"created_at"
-				]
-			}
-		);
-		for (const tweet of tweets.data) {
-			const capture = tweet.text.match(urlRegex);
-			if (capture) {
-				for (const url of capture) {
-					const url_expanded = await uu.expand(url);
-					console.log(url_expanded);
-					outputData.push({
-						"tweet_link": `https://twitter.com/${process.env.TWEETER_USERNAME}/status/${tweet.id}`,
-						"link": url_expanded,
-						"created_at": tweet.created_at
-					});
+		let next_token = null;
+		while (true) {
+			const tweets = await client.tweets.usersIdTweets(
+				user.data.id,
+				{
+					"max_results": 100,
+					"pagination_token": next_token,
+					"tweet.fields": [
+						"created_at"
+					]
+				}
+			);
+			next_token = tweets.meta.next_token;
+			console.log(tweets.meta.next_token);
+			for (const tweet of tweets.data) {
+				const capture = tweet.text.match(urlRegex);
+				if (capture) {
+					for (const url of capture) {
+						let url_expanded;
+						try {
+							url_expanded = await uu.expand(url);
+						} catch (error) {
+							console.log(error);
+							console.log("Couldn't expand url: " + url);
+						}
+						if (url_expanded && !url_expanded.match(/twitter.com/)) {
+							console.log(url_expanded);
+							outputData.push({
+								"tweet_link": `https://twitter.com/${process.env.TWEETER_USERNAME}/status/${tweet.id}`,
+								"link": url_expanded,
+								"created_at": tweet.created_at
+							});
+						}
+					};
 				};
 			};
-		};
+			if (!next_token) break;
+		}
 	} catch (error) {
 		console.log(error);
 	}
