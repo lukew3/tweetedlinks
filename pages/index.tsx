@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Tweeted Links</title>
         <meta name="description" content="See all the links that a Twitter user has tweeted." />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/img/favicon.ico" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
